@@ -5,19 +5,6 @@ import SettingsPage from './components/SettingsPage';
 import { LangagesContextProvider } from './contexts/LanguagesContext';
 
 function App() {
-  // const [proverbs, setProverbs] = useState([]);
-  // const [currentLanguage, setCurrentLanguage] = useState('en');
-
-  // const fetchProverbs = () => {
-  //  console.log(`fetching "${currentLanguage}" proverbs`);
-  //  fetch(`/pretend-api/results-${currentLanguage}.json`)
-  //    .then((res) => res.json())
-  //    .then((data) => setProverbs(data.results));
-  // };
-
-  // TODO : instanciate the two contexts providers here
-  // TODO : for exemple, you should pass proverbs, setProverbs and fetchProverbs to the ProverbsContext.Provider's value prop
-
   return (
     <LangagesContextProvider>
       <Router>
