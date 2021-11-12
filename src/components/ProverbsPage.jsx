@@ -17,7 +17,7 @@ const ProverbsPage = () => {
   }, []);
 
   // TODO: change that to take the current language from Context instead of hardcoding "en"
-  const t = getTranslatorForLanguage('en');
+  const t = getTranslatorForLanguage(langues);
 
   return (
     <>

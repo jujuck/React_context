@@ -6,7 +6,7 @@ import { LangagesContext } from '../contexts/LanguagesContext';
 const SettingsPage = () => {
   // TODO: change that to take the current language from Context instead of hardcoding "en"
   const { langues, setLangues } = useContext(LangagesContext);
-  const t = getTranslatorForLanguage('en');
+  const t = getTranslatorForLanguage(langues);
 
   return (
     <div>
@@ -20,8 +20,6 @@ const SettingsPage = () => {
         onChange={(event) => {
           const newLang = event.target.value;
           setLangues(newLang);
-          console.log(newLang);
-          // TODO: set the (new) currentLanguage globally in the Context
         }}
       >
         <option value="en">en</option>
