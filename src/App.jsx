@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProverbsPage from './components/ProverbsPage';
 import SettingsPage from './components/SettingsPage';
 
@@ -19,10 +19,10 @@ function App() {
 
   return (
     <Router>
-      <Routes>
+      <Switch>
         <Route path="/" exact component={ProverbsPage} />
         <Route path="/settings" component={SettingsPage} />
-      </Routes>
+      </Switch>
     </Router>
   );
 }
