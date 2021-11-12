@@ -16,7 +16,7 @@ const SettingsPage = () => {
       <select
         id="language"
         name="language"
-        defaultValue={t} // TODO: get the default language from context
+        defaultValue={langues} // TODO: get the default language from context
         onChange={(event) => {
           const newLang = event.target.value;
           setLangues(newLang);
