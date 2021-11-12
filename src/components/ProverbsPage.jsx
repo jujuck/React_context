@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { getTranslatorForLanguage } from '../translations';
+import { LangagesContext } from '../contexts/LanguagesContext';
 
 const ProverbsPage = () => {
   const [proverbs, setProverbs] = useState([]);
-  const [currentLanguage, setCurrentLanguage] = useState('en');
+  const { langues } = useContext(LangagesContext);
 
   useEffect(() => {
-    console.log(`fetching "${currentLanguage}" proverbs`);
-    fetch(`/pretend-api/results-${currentLanguage}.json`)
+    console.log(`fetching "${langues}" proverbs`);
+    fetch(`/pretend-api/results-${langues}.json`)
       .then((res) => res.json())
       .then((data) => {
         setProverbs(data.results);
-        console.log('Hello');
-        console.log(data.results);
       });
-    setCurrentLanguage('en');
   }, []);
 
   // TODO: change that to take the current language from Context instead of hardcoding "en"
