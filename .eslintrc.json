@@ -17,6 +17,7 @@
     "linebreak-style": ["error", "unix"],
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": 0
+    "react/prop-types": 0,
+     "import/no-named-as-default": 0
   }
 }
