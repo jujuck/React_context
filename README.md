@@ -4,6 +4,7 @@ L'objectif du projet est de découvrir la mise en place d'un context React avec 
 ## Steps
 - 1/ Create and export context objects and provider components in contexts/LanguagesContext.js.
 - 2/ Set the state of the langages in the context provider.
+- 3/ Import the context on the *App.jsx* and encapsule all your routes within
 - 3/ Consume the data of the langages in the setting component, and update the context langage.
 - 4/ The language <select /> should have the currentLanguage selected by default (defaultValue).
 - 5/ Fetch the proverbs in the Proverbs.js with useEffect and Fetch.
